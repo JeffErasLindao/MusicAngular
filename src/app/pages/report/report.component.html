@@ -3,13 +3,13 @@
     <mat-form-field>
       <mat-label>Artistas</mat-label>
       <mat-select
-        [formControl]="autoresSelect"
+        [formControl]="artistasSelect"
         (selectionChange)="selection($event.value)"
       >
         <mat-option [value]="null">None</mat-option>
         <mat-option
           *ngFor="let artista of artistas"
-          [value]="artista.idartista"
+          [value]="artista.idArtista"
         >
           {{ artista.nombre }}
         </mat-option>
@@ -19,24 +19,24 @@
 
   <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
     <table mat-table [dataSource]="canciones" class="mat-elevation-z8">
-      <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef>Titulo</th>
-        <td mat-cell *matCellDef="let cancion">{{ cancion.nombre }}</td>
+      <ng-container matColumnDef="titulo">
+        <th mat-header-cell *matHeaderCellDef>Titulo de Cancion</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.titulo }}</td>
       </ng-container>
 
       <ng-container matColumnDef="duracion">
-        <th mat-header-cell *matHeaderCellDef>Editorial</th>
-        <td mat-cell *matCellDef="let cancion">{{ cancion.editorial }}</td>
+        <th mat-header-cell *matHeaderCellDef>Duracion</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.duracion }}</td>
       </ng-container>
 
       <ng-container matColumnDef="fecha">
-        <th mat-header-cell *matHeaderCellDef>Titulo</th>
+        <th mat-header-cell *matHeaderCellDef>Fecha de Estreno</th>
         <td mat-cell *matCellDef="let cancion">{{ cancion.fecha }}</td>
       </ng-container>
 
       <ng-container matColumnDef="link">
-        <th mat-header-cell *matHeaderCellDef>Año</th>
-        <td mat-cell *matCellDef="let cancion">{{ cancion.anio }}</td>
+        <th mat-header-cell *matHeaderCellDef>Link</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.link }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

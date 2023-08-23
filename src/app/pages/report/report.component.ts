@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Artista } from 'src/app/interfaces/artista';
 import { Cancion } from 'src/app/interfaces/cancion';
 import { DataServiceService } from 'src/app/providers/data-service.service';
@@ -11,25 +12,26 @@ import { DataServiceService } from 'src/app/providers/data-service.service';
 export class ReportComponent {
   artistas : Artista[] = [];
   canciones: Cancion[] = [];
-  displayedColumns : string[] = ['idCancion','titulo','duracion','fecha','link'];
-  autoresSelect = new FormControl('');
+  displayedColumns : string[] = ['titulo','duracion','fecha','link'];
+  artistasSelect = new FormControl('');
 
   constructor(private DataProvider : DataServiceService){
 
   }
 
   ngOnInit(){
-    this.DataProvider.getArtistas.subscribe((response)=>{
-      this.artistas = response as Autor[]
+    this.DataProvider.getArtistas().subscribe((response)=>{
+      this.artistas = response as Artista[]
+      console.log(this.artistas);
     })
   }
 
   selection(id: number | null) {
     if (id === null) {
-      this.libros = [];
+      this.canciones = [];
     } else {
-      this.DataProvider.getResponseLibroByAutorId(id).subscribe((response) => {
-        this.libros = response as Libro[];
+      this.DataProvider.getCancionesByArtistaId(id).subscribe((response) => {
+        this.canciones = response as Cancion[];
       });
     }
   }

@@ -35,8 +35,8 @@ export class DataServiceService {
     return this.http.get(this.url + this.listas);
   }
 
-  getCancionByArtistaId(id:number){
-    this.PATH_SONGBYARTIST =  `/cancion/findSongByArtist/${id}/json`;
+  getCancionesByArtistaId(id:number){
+    this.PATH_SONGBYARTIST =  `/cancion/findSongsByArtist/${id}/json`;
     return this.http.get(this.url + this.PATH_SONGBYARTIST);
   }
 
