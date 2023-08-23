@@ -1,0 +1,46 @@
+<div class="container" fxLayout="column" fxLayoutAlign="start center">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+    <mat-form-field>
+      <mat-label>Artistas</mat-label>
+      <mat-select
+        [formControl]="autoresSelect"
+        (selectionChange)="selection($event.value)"
+      >
+        <mat-option [value]="null">None</mat-option>
+        <mat-option
+          *ngFor="let artista of artistas"
+          [value]="artista.idartista"
+        >
+          {{ artista.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+    <table mat-table [dataSource]="canciones" class="mat-elevation-z8">
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>Titulo</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.nombre }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="duracion">
+        <th mat-header-cell *matHeaderCellDef>Editorial</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.editorial }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef>Titulo</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.fecha }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="link">
+        <th mat-header-cell *matHeaderCellDef>Año</th>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.anio }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
