@@ -11,7 +11,7 @@ import { DataServiceService } from 'src/app/providers/data-service.service';
 export class ReportComponent {
   artistas : Artista[] = [];
   canciones: Cancion[] = [];
-  displayedColumns : string[] = ['idautor','nombre','editorial','anio'];
+  displayedColumns : string[] = ['idCancion','titulo','duracion','fecha','link'];
   autoresSelect = new FormControl('');
 
   constructor(private DataProvider : DataServiceService){
@@ -19,8 +19,8 @@ export class ReportComponent {
   }
 
   ngOnInit(){
-    this.DataProvider.getResponseAutoresALL().subscribe((response)=>{
-      this.autores = response as Autor[]
+    this.DataProvider.getArtistas.subscribe((response)=>{
+      this.artistas = response as Autor[]
     })
   }
 
