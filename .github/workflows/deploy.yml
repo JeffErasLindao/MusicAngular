@@ -42,5 +42,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           build_dir: dist/music-app
+          publish_dir: dist/music-app # Agrega esta línea
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
