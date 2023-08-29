@@ -2,8 +2,8 @@ export interface Cancion {
     idCancion: number
     titulo: string
     duracion: string
-    fecha: string
-    link: string
+    lanzamiento: string
     Artista_idArtista: number
-    Genero_idGenero: number
+    Album_idAlbum: number
+    lyric_idlyric: number
 }

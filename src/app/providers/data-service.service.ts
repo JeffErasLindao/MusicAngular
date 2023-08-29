@@ -5,13 +5,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataServiceService {
-  private url:string = "https://restmusikproject-production.up.railway.app/rest";
+  //"https://restmusikproject-production.up.railway.app/rest"
+  private url:string = "http://localhost:3000/rest";
   private usuarios : string = "/usuario/findAll/json";
   private artistas : string = "/artista/findAll/json";
   private canciones : string = "/cancion/findAll/json";
   private generos : string = "/genero/findAll/json";
   private listas : string = "/listadereproduccion/findAll/json";
-  private PATH_SONGBYARTIST : string = ``;
+  private PATH_XBYARTIST : string = ``;
 
   constructor(private http: HttpClient) { }
 
@@ -36,8 +37,13 @@ export class DataServiceService {
   }
 
   getCancionesByArtistaId(id:number){
-    this.PATH_SONGBYARTIST =  `/cancion/findSongsByArtist/${id}/json`;
-    return this.http.get(this.url + this.PATH_SONGBYARTIST);
+    this.PATH_XBYARTIST =  `/cancion/findSongsByArtist/${id}/json`;
+    return this.http.get(this.url + this.PATH_XBYARTIST);
+  }
+
+  getAlbumesByArtistaId(id:number){
+    this.PATH_XBYARTIST =  `/album/findAlbumsByArtist/${id}/json`;
+    return this.http.get(this.url + this.PATH_XBYARTIST);
   }
 
 }

@@ -29,14 +29,16 @@
         <td mat-cell *matCellDef="let cancion">{{ cancion.duracion }}</td>
       </ng-container>
 
-      <ng-container matColumnDef="fecha">
+      <ng-container matColumnDef="lanzamiento">
         <th mat-header-cell *matHeaderCellDef>Fecha de Estreno</th>
-        <td mat-cell *matCellDef="let cancion">{{ cancion.fecha }}</td>
+        <td mat-cell *matCellDef="let cancion">{{ cancion.lanzamiento }}</td>
       </ng-container>
 
-      <ng-container matColumnDef="link">
-        <th mat-header-cell *matHeaderCellDef>Link</th>
-        <td mat-cell *matCellDef="let cancion">{{ cancion.link }}</td>
+      <ng-container matColumnDef="album">
+        <th mat-header-cell *matHeaderCellDef>Album</th>
+        <td mat-cell *matCellDef="let cancion">
+          {{ getAlbumName(cancion.Album_idAlbum) }}
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
