@@ -8,6 +8,8 @@ import { MainComponent } from './pages/main/main.component';
 import { ReportComponent } from './pages/report/report.component';
 import { AboutComponent } from './pages/about/about.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { CustomDataComponent } from './pages/custom-data/custom-data.component';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -20,8 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { MatTableModule } from '@angular/material/table';
-import { CustomDataComponent } from './pages/custom-data/custom-data.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
+
 
 @NgModule({
   declarations: [
