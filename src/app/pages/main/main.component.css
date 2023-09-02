@@ -1,0 +1,88 @@
+
+.masthead {
+    background-attachment: fixed;
+}
+
+.title{
+    font-family: 'musik','Space Grotesk', "Helvetica Neue", sans-serif; 
+    font-size: 10rem;
+}
+
+.title p {
+    color: red;
+}
+
+.callout {
+    background-attachment: fixed;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+/*----- Quotation Section
+--------------------------------------------------------------*/
+#quotation blockquote {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+#quotation q {
+    display: block;
+    padding: 50px 0;
+}
+#quotation .author-name {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 3.6em;
+    font-weight: 700;
+}
+
+.padding-large {
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+blockquote, blockquote p {
+    font-size: 2.5em;
+    line-height: 1.4em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-style: normal;
+    margin: 0 0 20px;
+    padding: 20px 40px;
+    color: #8d8d8d;
+}
+
+#services{
+    background-color: rgb(218, 32, 32);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.service-icon .material-icons {
+    background-color: #fff;
+    color: #000000;
+    height: 7rem;
+    width: 7rem;
+    display: block;
+    line-height: 7.5rem;
+    font-size: 2.25rem;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.title2 span{
+    color:gold;
+}
+
+a{
+    text-decoration: none;
+}
+
+#calltoaction{
+    background-color: rgb(218, 32, 32);
+}
+
+

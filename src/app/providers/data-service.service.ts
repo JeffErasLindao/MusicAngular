@@ -12,6 +12,8 @@ export class DataServiceService {
   private canciones : string = "/cancion/findAll/json";
   private generos : string = "/genero/findAll/json";
   private listas : string = "/listadereproduccion/findAll/json";
+  private songsByArtist : string = "/artista/findSongsNumberByArtist/json";
+  private songsByGenre: string = "/genero/findSongsByGenre/json";
   private PATH_XBYARTIST : string = ``;
 
   constructor(private http: HttpClient) { }
@@ -44,6 +46,14 @@ export class DataServiceService {
   getAlbumesByArtistaId(id:number){
     this.PATH_XBYARTIST =  `/album/findAlbumsByArtist/${id}/json`;
     return this.http.get(this.url + this.PATH_XBYARTIST);
+  }
+
+  getSongsByArtist(){
+    return this.http.get(this.url + this.songsByArtist);
+  }
+
+  getSongsByGenre(){
+    return this.http.get(this.url + this.songsByGenre);
   }
 
 }

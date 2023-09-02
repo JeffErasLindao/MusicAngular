@@ -1,1 +1,253 @@
-<p>main works!</p>
+<!-- Header-->
+<header class="masthead d-flex align-items-center justify-content-center">
+  <div class="container px-4 px-lg-5 text-center">
+    <h1 class="mb-5 title">
+      Musik
+      <p>DB</p>
+    </h1>
+    <h2 class="mb-5"><em>The BEST music database in the WORLD.</em></h2>
+  </div>
+</header>
+<!--Introduccion-->
+<div class="content-section bg-light" id="graph1">
+  <div
+    class="container px-4 px-lg-5 h-100 align-items-center justify-content-center"
+  >
+    <div class="row text-center mb-5"><h1>Bienvenid@</h1></div>
+    <div class="row mb-5">
+      <div class="col-xl-6 text-center">
+        <h2 class="mx-auto mt-2 mb-5">
+          En MusikDB, te damos la bienvenida a una experiencia musical única.
+          Nuestra plataforma te brinda acceso a una inmensa base de datos que
+          abarca todos los artistas, álbumes, canciones y géneros musicales de
+          todo el mundo. ¡Explora, descubre y sumérgete en el fascinante mundo
+          de la música como nunca antes!
+        </h2>
+      </div>
+      <div class="col-xl-6">
+        <div class="card mb-4">
+          <div class="card-header">
+            <i class="fas fa-chart-area me-1"></i>
+            Grafica 1
+          </div>
+          <div class="card-body">
+            <canvas id="artistSongs" width="100%" height="40"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-xl-6">
+        <div class="card mb-4">
+          <div class="card-header">
+            <i class="fas fa-chart-area me-1"></i>
+            Grafica 2
+          </div>
+          <div class="card-body">
+            <canvas id="bestGenres" width="100%" height="40"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 text-center">
+        <h2 class="mx-auto mt-2 mb-5">
+          En nuestra plataforma, estamos comprometidos en brindar a nuestros
+          clientes una experiencia musical completa y enriquecedora. Además de
+          ofrecer una vasta base de datos de música de todo el mundo, también
+          proporcionamos una herramienta poderosa y gratuita: los gráficos
+          estadísticos. Nuestra función de gráficos estadísticos te permite
+          explorar y comprender mejor la música que amas. Con acceso a datos
+          detallados y actualizados, puedes obtener información valiosa sobre
+          tus géneros, artistas y canciones favoritas. ¿Cuántas canciones de tu
+          artista preferido tienes en tu lista de reproducción? ¿Cuál es tu
+          género musical más escuchado este mes? Nuestros gráficos te
+          proporcionarán respuestas claras y visuales a estas preguntas y más.
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services-->
+<section class="content-section text-white text-center" id="services">
+  <div class="container px-4 px-lg-5">
+    <div class="content-section-heading">
+      <h3 class="text-secondary mb-0">musikdb</h3>
+      <h2 class="mb-5">Servicios</h2>
+    </div>
+    <div class="row gx-4 gx-lg-5">
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <a href="">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="material-icons">diversity_1</i>
+          </span>
+        </a>
+        <h4><strong>Cualquier Artista.</strong></h4>
+        <p class="text-faded mb-0">
+          ¡Desde el top 10 hasta indies y novatos! Recopilamos datos de cada
+          artista que vivió y existirá.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <a href="">
+          <span class="service-icon rounded-circle mx-auto mb-3"
+            ><i class="material-icons">music_note</i></span
+          ></a
+        >
+        <h4><strong>Cualquier Cancion.</strong></h4>
+        <p class="text-faded mb-0">
+          ¡Tenemos los mejores éxitos y los más nuevos! No dudes en usar nuestro
+          filtro personalizado y empieza a investigar.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+        <a href="">
+          <span class="service-icon rounded-circle mx-auto mb-3"
+            ><i class="material-icons">album</i></span
+          ></a
+        >
+        <h4><strong>Cualquier Album.</strong></h4>
+        <p class="text-faded mb-0">
+          <i class="fas fa-heart"></i>
+          Nevermind,The Dark side of the moon, Abbey Road, Thriller, Ok
+          Computer... descubre algo nuevo y ama musikdb.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <a href="">
+          <span class="service-icon rounded-circle mx-auto mb-3"
+            ><i class="material-icons">library_music</i></span
+          ></a
+        >
+        <h4><strong>Cualquier Genero.</strong></h4>
+        <p class="text-faded mb-0">
+          Tristeza, felicidad, Risa, Enojo, baila, piensa, ama, odia... todos
+          los sentimientos para todas las personas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Callout-->
+<section class="callout">
+  <div class="container px-4 px-lg-5 text-center">
+    <h2 class="mx-auto mb-5 title2">
+      <span>Everything</span> is
+      <em>here</em>
+    </h2>
+  </div>
+</section>
+<!-- Portfolio-->
+<section class="content-section" id="portfolio">
+  <div class="container px-4 px-lg-5">
+    <div class="content-section-heading text-center">
+      <h3 class="text-secondary mb-0">Just Arrived!</h3>
+      <h2 class="mb-5">Recent Artists Added</h2>
+    </div>
+    <div class="row gx-0">
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#!">
+          <div class="caption">
+            <div class="caption-content">
+              <div class="h2">BTS</div>
+              <p class="mb-0">
+                BTS es un influyente grupo masculino surcoreano conocido por su
+                música pop y su impacto global. Admirado por su éxito en la
+                música K-Pop y su alcance en la cultura pop mundial.
+              </p>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#!">
+          <div class="caption">
+            <div class="caption-content">
+              <div class="h2">Queen</div>
+              <p class="mb-0">
+                Han producido éxitos icónicos como "Bohemian Rhapsody", "We Will
+                Rock You" y "Another One Bites the Dust". Su legado perdura como
+                una de las bandas más influyentes de la historia del rock.
+              </p>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#!">
+          <div class="caption">
+            <div class="caption-content">
+              <div class="h2">Michael Jackson</div>
+              <p class="mb-0">
+                Michael Jackson fue un legendario cantante, compositor y
+                bailarín estadounidense conocido como el "Rey del Pop". Sus
+                éxitos como "Thriller" y "Billie Jean" lo convirtieron en una
+                figura influyente en la música.
+              </p>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#!">
+          <div class="caption">
+            <div class="caption-content">
+              <div class="h2">The Beatles</div>
+              <p class="mb-0">
+                Formada por John Lennon, Paul McCartney, George Harrison y Ringo
+                Starr, la banda es conocida por sus melodías pegajosas y letras
+                innovadoras que influyeron en generaciones posteriores.
+              </p>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call to Action-->
+<section class="content-section text-white" id="calltoaction">
+  <div class="container px-4 px-lg-5 text-center">
+    <h2 class="mb-4">Descubre mas..</h2>
+    <a class="btn btn-xl btn-light me-4" href="#!">Documentacion</a>
+    <a class="btn btn-xl btn-dark" href="#!">Sobre nosotros</a>
+  </div>
+</section>
+<!-- Frase del dia -->
+<section
+  id="quotation"
+  class="content-section bg-light align-center padding-large"
+>
+  <div class="container px-4 px-lg-5 text-center">
+    <blockquote>
+      <q>Sin musica, la vida seria un error.</q>
+      <div class="author-name">- Friedrich Nietzsche</div>
+    </blockquote>
+  </div>
+</section>
+<!-- Footer-->
+<footer class="footer text-center">
+  <div class="container px-4 px-lg-5">
+    <ul class="list-inline mb-5">
+      <li class="list-inline-item">
+        <a class="social-link rounded-circle text-white mr-3" href="#!"
+          ><i class="material-icons">music_note</i></a
+        >
+      </li>
+      <li class="list-inline-item">
+        <a class="social-link rounded-circle text-white mr-3" href="#!"
+          ><i class="material-icons">music_note</i></a
+        >
+      </li>
+      <li class="list-inline-item">
+        <a class="social-link rounded-circle text-white" href="#!"
+          ><i class="material-icons">music_note</i></a
+        >
+      </li>
+    </ul>
+    <p class="text-muted small mb-0">Copyright &copy; MusikDB 2023</p>
+  </div>
+</footer>

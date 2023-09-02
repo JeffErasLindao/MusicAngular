@@ -20,6 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { MatTableModule } from '@angular/material/table';
+import { CustomDataComponent } from './pages/custom-data/custom-data.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MatTableModule } from '@angular/material/table';
     MainComponent,
     ReportComponent,
     AboutComponent,
-    MenuComponent
+    MenuComponent,
+    CustomDataComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
