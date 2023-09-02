@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataServiceService {
   //"https://restmusikproject-production.up.railway.app/rest"
-  private url:string = "http://localhost:3000/rest";
+  private url:string = "https://restmusikproject-production.up.railway.app/rest";
   private usuarios : string = "/usuario/findAll/json";
   private artistas : string = "/artista/findAll/json";
   private canciones : string = "/cancion/findAll/json";
