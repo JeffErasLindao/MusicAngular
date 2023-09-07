@@ -47,11 +47,24 @@ body {
   color: var(--font-color);
 }
 
-/* Cover image */
 .cover {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Establece un ancho máximo para el contenedor */
+  max-width: 100%;
+
+  width: 300px; /* Ancho fijo */
+  height: 200px; /* Altura fija */
+  overflow: hidden; /* Para recortar la imagen si es necesario */
+}
+
+/* Estilo para la imagen */
+.cover-image {
+  /* Establece un ancho máximo para la imagen del 100% */
+  max-width: 100%;
+  /* Establece una altura automática para que la imagen se ajuste proporcionalmente */
+  height: auto;
 }
 
 .player {
