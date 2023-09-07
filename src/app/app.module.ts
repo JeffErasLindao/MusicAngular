@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { MatTableModule } from '@angular/material/table';
+import { MoreComponent } from './pages/more/more.component';
 
 
 @NgModule({
@@ -32,10 +33,14 @@ import { MatTableModule } from '@angular/material/table';
     AboutComponent,
     MenuComponent,
     CustomDataComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, // Agrega BrowserAnimationsModule
+    MatIconModule,
+    MatButtonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,

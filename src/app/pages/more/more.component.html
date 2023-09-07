@@ -1,0 +1,56 @@
+
+<!-- Swiper -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+
+      <div class="player">
+        <div class="cover">
+          <img [src]="'assets/img/' + datasong[currentSongIndex].cancionmp3 + '.jpg'" alt="Carátula de la canción" />
+        </div>
+
+      
+        <div class="song">
+          <h1 class="title">{{ datasong[currentSongIndex].cancionmp3 }}</h1>
+          <h2 class="artist">{{ datasong[currentSongIndex].artista }}</h2>
+        </div>
+
+        <audio controls>
+          <!--   <source [src]="'assets/songs/' + datasong[currentSongIndex].cancionmp3 + '.mp3'" type="audio/mpeg"> -->
+          <!--   <source src= "assets/songs/Drake_HotlineBling.mp3" type="audio/mpeg"> -->
+
+
+          <source src="assets/songs/Coldplay_Paradise.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <div>
+          <button mat-icon-button (click)="play()"><mat-icon>play_arrow</mat-icon></button>
+          <button mat-icon-button (click)="pause()"><mat-icon>pause</mat-icon></button>
+          <button mat-icon-button (click)="nextSong()"
+            [disabled]="currentSongIndex === datasong.length - 1"><mat-icon>skip_next</mat-icon></button>
+          <button mat-icon-button (click)="previousSong()"
+            [disabled]="currentSongIndex === 0"><mat-icon>skip_previous</mat-icon></button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div>
+  <!-- Tabla con datos -->
+
+  <table>
+    <tbody>
+      <tr *ngFor="let datum of datasong">
+        <th> {{ datum.artista }} </th>
+        <td> {{ datum.cancionmp3 }} </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
